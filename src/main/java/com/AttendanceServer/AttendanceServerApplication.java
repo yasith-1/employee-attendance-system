@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AttendanceServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AttendanceServerApplication.class, args);
+		SpringApplication.run(AttendanceServerApplication.class);
 	}
 
 }

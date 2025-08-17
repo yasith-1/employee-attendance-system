@@ -1,13 +1,11 @@
 package com.AttendanceServer.entities;
 
 import com.AttendanceServer.dto.ProjectDTO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 // 01 t krnee meka
 @Entity
@@ -20,12 +18,15 @@ public class Project {
 
     private String name;
 
-    private  String duration;
+    private String duration;
 
     private Date startDate;
 
+    @OneToMany
+    private List<User> users;
 
-    public ProjectDTO getDto(){
+
+    public ProjectDTO getDto() {
         ProjectDTO dto = new ProjectDTO();
 
         dto.setId(id);
